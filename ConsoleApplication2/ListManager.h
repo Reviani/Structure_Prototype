@@ -11,7 +11,7 @@ public:
 	void QuickSort();
 	// gfg STANDS for geeks for geeks, as thats where i copied this code to try to understand and reverse enginier this data
 	void GFGMerge(int arr[], int l, int m, int r);
-	void GFGmergeSort(int arr[], int l, int r);
+	void MergeSort(int arr[], int l, int r);
 	void PointerMerge(int *arr[]);
 	void printArray(int A[], int size);
 private:
@@ -53,6 +53,7 @@ inline void ListManager<T>::GFGMerge(int arr[], int l, int m, int r)
 	// Create temp arrays  
 	//int L[] = new int ;
 	//int R[n2];
+	// wouldn't this give errors with non int arrays?
 	vector<int> L(n1), R(n2); 
 
 
@@ -112,7 +113,7 @@ inline void ListManager<T>::GFGMerge(int arr[], int l, int m, int r)
 // right index of the sub-array 
 // of arr to be sorted */
 template<class T>
-void ListManager<T>::GFGmergeSort(int arr[], int l, int r)
+void ListManager<T>::MergeSort(int arr[], int l, int r)
 {
 //	int TestArray[] = { 5, 63, 56, 7, 23, 45, 2, 32 };
 
@@ -127,8 +128,8 @@ void ListManager<T>::GFGmergeSort(int arr[], int l, int r)
 		int m = l + (r - l) / 2;
 
 		// Sort first and second halves 
-		GFGmergeSort(arr, l, m);
-		GFGmergeSort(arr, m + 1, r);
+		MergeSort(arr, l, m);
+		MergeSort(arr, m + 1, r);
 
 		GFGMerge(arr, l, m, r);
 	}

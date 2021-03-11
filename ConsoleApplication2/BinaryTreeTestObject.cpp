@@ -15,8 +15,10 @@ Otherwise go down a root (based on greater or less than) to a point where there 
 
 
 	BinaryTreeTestObject::BinaryTreeTestObject() { // Constructor
+	//Doeasn't quite work with node system
 		DebugTest();
-		TestNum = -1;
+		TestNum = 0;
+		CurrentNode = new Node(TestNum);
 		
 	}
 
@@ -29,6 +31,7 @@ Otherwise go down a root (based on greater or less than) to a point where there 
 		// Lets have this use and revice a pointer as well
 		cout << "Number " << NumTest << " Received \n";
 		TestNum = NumTest;
+		 CurrentNode = new Node(TestNum);
 	}
 
 	void BinaryTreeTestObject::DebugTest() { // debug test
@@ -62,7 +65,11 @@ Otherwise go down a root (based on greater or less than) to a point where there 
 		Check right child, repeat steps
 		Otherwise, check Left child and repeat
 		*/
-		
+		 
+
+		 Node* root = CurrentNode->InsertNode(CurrentNode, InputData);
+
+		/**
 		//Note; this  function does not look for duplicates
 		if (ThisNode.data == NULL) {
 			ThisNode.data = InputData;
@@ -82,6 +89,8 @@ Otherwise go down a root (based on greater or less than) to a point where there 
 					cout << " No Left node! \n";
 			}
 		}
+
+		*/
 	}
 
 	void BinaryTreeTestObject::RemoveNode(int Data)

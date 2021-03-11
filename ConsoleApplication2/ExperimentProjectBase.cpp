@@ -18,7 +18,8 @@ void MergeSortTest();
 
 //template<class T>
 
-BinaryTreeTestObject TestTree_1;
+//		These will call the contrructor of these objects
+BinaryTreeTestObject TestTree_1;	
 BinaryTreeTestObject TestTree_2(3);
 ListManager<int> ListTest;
 HashTable TestHashing;
@@ -70,7 +71,7 @@ SpaceInConsole();
 	MergeSortTest();
 SpaceInConsole();
 	//Tests adding a binary tree
-	TestTree_1.AddNode(50);
+ 	TestTree_1.AddNode(50);
 	TestTree_1.AddNode(60);
 	TestTree_1.AddNode(40);
 SpaceInConsole();
@@ -136,7 +137,7 @@ void MergeSortTest() {
 	cout << "Given array is \n";
 	ListTest.printArray(arr, arr_size);
 
-	ListTest.GFGmergeSort(arr, 0, arr_size - 1);
+	ListTest.MergeSort(arr, 0, arr_size - 1);
 
 	cout << "\nSorted array is \n";
 	ListTest.printArray(arr, arr_size);

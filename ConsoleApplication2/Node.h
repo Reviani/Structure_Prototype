@@ -10,7 +10,8 @@ class Node
 public:
 	Node();
 	Node(int item);
-	void InsertItem(Node NewNode, int key, std::string value);
+	Node*  InsertNode(Node *root, int key);
+	Node*  CreateNode(int key);
 	int key;
 	std::string thing;
 	Node *left, *right;

@@ -14,12 +14,12 @@ public:
 	BinaryTreeTestObject();
 	~BinaryTreeTestObject();
 	BinaryTreeTestObject(int TestNum);
-	void DebugTest();
-	void PointerTest( int *test);
-	void AddNode(int Data);
-	void RemoveNode(int Data);
+	void DebugTest(); // unessesary
+	void PointerTest( int *test); // pointers, not directly related
+	void AddNode(int Data); // calls node object
+	void RemoveNode(int Data); //
 	struct B_node;
-	Node CurrentNode;
+	Node *CurrentNode;
 	//B_node ThisNode;
 private:
 	int TestNum;
